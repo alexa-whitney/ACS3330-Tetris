@@ -75,3 +75,17 @@
   border-right-color: var(--border-right-color);
   border-bottom-color: var(--border-bottom-color);
 }
+
+/* Tells the browser to calc the size of boxes to 
+include the border width rather than adding
+the border to the width, which is the default behavior */
+* {
+  box-sizing: border-box;
+}
+
+.grid-board {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), var(--tile-size));
+  grid-gap: 0;
+  align-self: flex-start;
+}
