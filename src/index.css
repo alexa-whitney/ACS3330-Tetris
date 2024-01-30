@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -16,7 +16,7 @@ code {
   --bg-color: rgba(150, 150, 150, 1);
 
   /* Border Colors are all transparent colors. These will tint or shade the background color of the square. */
-  --border-left-color: rgba(255, 255, 255, 0.20);
+  --border-left-color: rgba(255, 255, 255, 0.2);
   --border-top-color: rgba(255, 255, 255, 0.33);
   --border-right-color: rgba(0, 0, 0, 0.15);
   --border-bottom-color: rgba(0, 0, 0, 0.5);
@@ -110,7 +110,7 @@ the border to the width, which is the default behavior */
   display: grid;
   grid-template-columns: repeat(4, var(--tile-size));
   align-self: flex-start;
-  grid-area: l; 
+  grid-area: l;
 }
 
 /* Score Board */
@@ -142,9 +142,10 @@ the border to the width, which is the default behavior */
 
   /* This defines the areas on the grid with names: 'h', 'l', 'c', 'r',
   and 'b'. The '.' represents an empty cell on the grid. */
-  grid-template-areas: "h h h"
-                       "l c r"
-                       ". b .";
+  grid-template-areas:
+    "h h h"
+    "l c r"
+    ". b .";
 }
 
 /* App-header */
@@ -155,4 +156,25 @@ the border to the width, which is the default behavior */
 /* score-board */
 .score-board {
   grid-area: r;
+}
+
+/* controls */
+.controls {
+  grid-area: b;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Control Button */
+.control-button {
+  --size: calc(var(--tile-size) * 2.5);
+  width: var(--size);
+  height: var(--size);
+  text-align: center;
+  display: block;
+  border-width: 5px;
+  border-top-color: var(--button-color-t);
+  border-left-color: var(--button-color-l);
+  border-right-color: var(--button-color-r);
+  border-bottom-color: var(--button-color-b);
 }
