@@ -2,6 +2,7 @@ import React from 'react';
 import GridBoard from './components/GridBoard';
 import NextBlock from './components/NextBlock';
 import ScoreBoard from './components/ScoreBoard';
+import './App.css';
 
 function App() {
   return (
