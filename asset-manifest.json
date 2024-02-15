@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/redux-tetris/static/css/main.36bd76af.css",
+    "main.js": "/redux-tetris/static/js/main.03bf6af4.js",
+    "static/js/787.1a0bb897.chunk.js": "/redux-tetris/static/js/787.1a0bb897.chunk.js",
+    "index.html": "/redux-tetris/index.html",
+    "main.36bd76af.css.map": "/redux-tetris/static/css/main.36bd76af.css.map",
+    "main.03bf6af4.js.map": "/redux-tetris/static/js/main.03bf6af4.js.map",
+    "787.1a0bb897.chunk.js.map": "/redux-tetris/static/js/787.1a0bb897.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36bd76af.css",
+    "static/js/main.03bf6af4.js"
+  ]
+}
