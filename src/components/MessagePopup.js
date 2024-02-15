@@ -17,7 +17,7 @@ export default function MessagePopup() {
 	}
 
 	return (
-		<div className={`message-popup' ${isHidden}`}>
+		<div className={`message-popup ${isHidden}`}>
 			<h1>{message}</h1>
 		</div>
 	)

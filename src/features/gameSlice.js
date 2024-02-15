@@ -12,11 +12,11 @@ export const gameSlice = createSlice({
 	name: 'game',
 	initialState: defaultState(),
 	reducers: {
-		pause: (state) => { 
+		pause: (state) => {
 			state.isRunning = false
 			return state
 		},
-		resume: (state) => { 
+		resume: (state) => {
 			state.isRunning = true
 			return state
 		},
@@ -45,8 +45,13 @@ export const gameSlice = createSlice({
 				// In this case we're done return state!
 				return state
 			}
+			
 			// If not place the block
-			const newGrid = addBlockToGrid(shape, grid, x, y, rotation)
+			const { newGrid, gameOver } = addBlockToGrid(shape, grid, x, y, rotation)
+			if (gameOver) {
+				state.gameOver = true
+				return state
+			}
 
 			// reset some things to start a new shape/block
 			state.x = 3
