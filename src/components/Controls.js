@@ -33,8 +33,35 @@ export default function Controls(props) {
 	useEffect(() => {
 		requestRef.current = requestAnimationFrame(update)
 		return () => cancelAnimationFrame(requestRef.current)
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isRunning])
+
+	// Handle keyboard controls
+	useEffect(() => {
+		const handleKeyDown = (event) => {
+			switch (event.key) {
+				case 'ArrowLeft':
+					dispatch(moveLeft());
+					break;
+				case 'ArrowRight':
+					dispatch(moveRight());
+					break;
+				case 'ArrowDown':
+					dispatch(moveDown());
+					break;
+				case 'ArrowUp':
+					dispatch(rotate());
+					break;
+				default:
+					break;
+			}
+		}
+
+		window.addEventListener('keydown', handleKeyDown);
+		return () => {
+			window.removeEventListener('keydown', handleKeyDown);
+		}
+	}, [dispatch])
 
 	return (
 		<div className="controls">

@@ -14,8 +14,7 @@ export default function NextBlock() {
   const grid = block.map((rowArray, row) => {
     return rowArray.map((square, col) => {
 			// If square variable is truthy, then the color is the nextShape, otherwise it's 0
-			const color = square ? nextShape : 0
-      return <GridSquare key={`${row}${col}`} color={color} />
+      return <GridSquare key={`${row}${col}`} color={square === 0 ? 0 : nextShape}/>
     })
   })
   
